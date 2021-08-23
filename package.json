@@ -1,0 +1,36 @@
+{
+  "name": "electron-manual-builder",
+  "version": "1.0.0",
+  "description": "electron manual builder",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "build": "electron-builder"
+  },
+  "build": {
+
+    "asar": false,
+    "win": {
+      "target": "msi"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lin557/electron-manual-builder.git"
+  },
+  "author": "lin557",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lin557/electron-manual-builder/issues"
+  },
+  "homepage": "https://github.com/lin557/electron-manual-builder#readme",
+  "devDependencies": {
+    "electron": "^13.2.1",
+    "electron-builder": "^22.11.7"
+  }
+}
