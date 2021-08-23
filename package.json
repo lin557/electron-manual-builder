@@ -2,17 +2,16 @@
   "name": "electron-manual-builder",
   "version": "1.0.0",
   "description": "electron manual builder",
-  "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron app",
     "pack": "electron-builder --dir",
-    "build": "electron-builder"
+    "dist": "electron-builder"
   },
   "build": {
-
     "asar": false,
     "win": {
-      "target": "msi"
+      "target": "nsis",
+      "icon": "project-name.ico"
     },
     "nsis": {
       "oneClick": false,
